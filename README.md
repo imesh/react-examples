@@ -7,4 +7,4 @@ This repository contains React.js examples for beginners.
 - [Hello World](/hello-world)
 
 ### License
-Apache 2.0
+Licensed under Apache 2.0
