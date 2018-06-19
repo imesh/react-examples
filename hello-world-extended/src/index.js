@@ -6,14 +6,14 @@ class Hello extends React.Component {
     constructor() {
         super();
         this.state = {
-            message: "my friend (from state)"
+            message: "World (from state)"
         }
         this.updateMessage = this.updateMessage.bind(this);
     }
 
     updateMessage() {
         this.setState({
-            message: "Message updated (in state)!"
+            message: "Message Updated (in state)"
         })
     }
 
@@ -28,6 +28,6 @@ class Hello extends React.Component {
 }
 
 ReactDOM.render(
-    <Hello message="My Friend" />, 
+    <Hello message="World" />, 
     document.getElementById("root")
 );
