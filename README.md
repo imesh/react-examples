@@ -8,5 +8,5 @@ A collection of React.js examples for beginners.
 - [Hello World Extended](/hello-world-extended)
 - [Todo List](/todo-list)
 
-### License
+## License
 Licensed under Apache 2.0
