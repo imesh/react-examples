@@ -16,6 +16,10 @@ class MeetupDetails extends Component {
 
     getMeetup() {
         let meetupId = this.props.match.params.id;
+        if(meetupId === undefined) {
+            this.props.history.push('/');
+            return;
+        }
         console.log('meetup id: ' + meetupId);
         axios.get(`http://localhost:3001/api/Meetups/${meetupId}`)
             .then(res => {
@@ -24,6 +28,7 @@ class MeetupDetails extends Component {
             })
             .catch(err => {
                 console.log(err);
+                this.props.history.push('/');
             });
     }
 
@@ -37,7 +42,7 @@ class MeetupDetails extends Component {
                 </ul>
                 <Link className="btn grey" to="/">Back</Link>
                 <Link className="btn" to={`/meetups/edit/${this.state.item.id}`}>Edit</Link>
-                <button className="btn red">Delete</button>
+                <button className="btn">Delete</button>
             </div>
         );
     }
