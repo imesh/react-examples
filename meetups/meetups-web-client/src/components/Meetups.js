@@ -33,6 +33,7 @@ class Meetups extends Component {
         return(
             <div>
                 <h1>Meetups</h1>
+                <p>Following meetups are found:</p>
                 <ul className="collection">
                     {meetupItems}
                 </ul>

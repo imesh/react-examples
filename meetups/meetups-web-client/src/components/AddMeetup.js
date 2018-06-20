@@ -30,6 +30,7 @@ class AddMeetup extends Component {
         return (
             <div>
                 <h1>Add Meetup</h1>
+                <p>Provid following information to add a Meetup:</p>
                 <form onSubmit={this.onSubmit.bind(this)}>
                     <div className="input-field">
                         <input type="text" name="name" ref="name" />
