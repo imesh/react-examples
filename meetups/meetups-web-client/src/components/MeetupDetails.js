@@ -14,6 +14,17 @@ class MeetupDetails extends Component {
         this.getMeetup();
     }
 
+    addMeetup(id) {
+        axios.request({
+            method: 'post',
+            url: `http://localhost:3001/api/meetups/${id}`
+        }).then(res => {
+            this.props.history.push('/');
+        }).catch(err => {
+            console.log(err);
+        })
+    }
+
     getMeetup() {
         let meetupId = this.props.match.params.id;
         if(meetupId === undefined) {
@@ -32,6 +43,16 @@ class MeetupDetails extends Component {
             });
     }
 
+    onDelete() {
+        let id = this.state.item.id;
+        axios.delete(`http://localhost:3001/api/meetups/${id}`)
+            .then(res => {
+                this.props.history.push('/');
+            }).catch(err => {
+                console.log(err);
+            });
+    }
+
     render() {
         return (
             <div>
@@ -42,7 +63,7 @@ class MeetupDetails extends Component {
                 </ul>
                 <Link className="btn grey" to="/">Back</Link>
                 <Link className="btn" to={`/meetups/edit/${this.state.item.id}`}>Edit</Link>
-                <button className="btn">Delete</button>
+                <button className="btn" onClick={this.onDelete.bind(this)}>Delete</button>
             </div>
         );
     }
