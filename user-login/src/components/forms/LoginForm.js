@@ -14,6 +14,8 @@ class LoginForm extends React.Component {
         errors: {}
     }
 
+    // A generic on change event handler for updating
+    // all state values
     onChange = e =>
         this.setState({
             data: { ...this.state.data, [e.target.name]: e.target.value }
@@ -27,7 +29,9 @@ class LoginForm extends React.Component {
         }
     }
 
+    // Validate data on submit event
     validate = (data) => {
+        // A new constant for passing errors
         const errors = {};
         if (!Validator.isEmail(data.email)) errors.email = "Invalid email address";
         if (!data.password) errors.password = "Password can't be blank";
