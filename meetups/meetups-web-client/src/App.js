@@ -10,11 +10,6 @@ const App = () => (
         <div className="container">
             <Main />
         </div>
-        <div className="fixed-action-btn">
-            <Link to="/meetups/add" className="btn-floating btn-large red">
-                <i className="fa fa-plus" />
-            </Link> 
-        </div>
     </div>
 )
 

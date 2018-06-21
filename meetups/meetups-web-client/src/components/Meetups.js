@@ -32,11 +32,16 @@ class Meetups extends Component {
         })
         return(
             <div>
-                <h1>Meetups</h1>
+                <h1>Meetups Overview</h1>
                 <p>Following meetups are found:</p>
                 <ul className="collection">
                     {meetupItems}
                 </ul>
+                <div className="fixed-action-btn">
+                    <a className="btn-floating btn-large waves-effect waves-light teal" href="/meetups/add">
+                        <i className="material-icons">add</i>
+                    </a>
+                </div>
             </div>
         )
     }

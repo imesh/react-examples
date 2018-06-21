@@ -73,11 +73,11 @@ class UpdateMeetup extends Component {
                     </div>
                     <div className="input-field">
                         <input type="text" name="city" ref="city" defaultValue={this.state.city} />
-                        <label htmlFor="city" >City</label>
+                        <label className="active" htmlFor="city" >City</label>
                     </div>
                     <div className="input-field">
                         <input type="text" name="address" ref="address" defaultValue={this.state.address} />
-                        <label htmlFor="address" >Address</label>
+                        <label className="active" htmlFor="address" >Address</label>
                     </div>
                     <Link className="btn grey" to="/">Back</Link>
                     <input type="submit" value="Save" className="btn" />
